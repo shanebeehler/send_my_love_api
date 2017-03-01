@@ -14,18 +14,18 @@ class Post < ApplicationRecord
   scope :running_total_distance, -> { last.running_total_distance.to_i }
 
   def calculate_distance_from_last_city
-    # prev_lat = Post.last.lat
-    # prev_lng = Post.last.lng
-    # distance = Haversine.distance(prev_lat, prev_lng, self.lat, self.lng)
-    # self.distance_from_last_city = distance.to_km
+    prev_lat = Post.last.lat
+    prev_lng = Post.last.lng
+    distance = Haversine.distance(prev_lat, prev_lng, self.lat, self.lng)
+    self.distance_from_last_city = distance.to_km
     self.distance_from_last_city = 0
   end
 
   def calculate_running_total_distance
     distance = 0
-    # if Post.last.running_total_distance != nil
-    #   distance = Post.last.running_total_distance
-    # end
+    if Post.last.running_total_distance != nil
+      distance = Post.last.running_total_distance
+    end
     self.running_total_distance = distance + self.distance_from_last_city
   end
 end
