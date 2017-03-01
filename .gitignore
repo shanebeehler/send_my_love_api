@@ -16,4 +16,5 @@
 # Ignore Byebug command history file.
 .byebug_history
 
-/config/*.yml
+secrets.yml
+cable.yml
