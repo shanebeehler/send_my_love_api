@@ -18,7 +18,6 @@ class Post < ApplicationRecord
     prev_lng = Post.last.lng
     distance = Haversine.distance(prev_lat, prev_lng, self.lat, self.lng)
     self.distance_from_last_city = distance.to_km
-    self.distance_from_last_city = 0
   end
 
   def calculate_running_total_distance
