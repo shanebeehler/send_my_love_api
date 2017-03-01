@@ -81,4 +81,5 @@ test:
 production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
-  pool: <%= ENV['DB_POOL'] || ENV['RAILS_MAX_THREADS'] || 5 %>
+  username: myapp
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
