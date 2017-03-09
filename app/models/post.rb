@@ -30,7 +30,7 @@ class Post < ApplicationRecord
 
   def calculate_running_total_distance
     distance = 0
-    if Post.last.running_total_distance
+    if Post.last
       distance = Post.last.running_total_distance
     end
     self.running_total_distance = distance + self.distance_from_last_city
