@@ -14,7 +14,7 @@ class Post < ApplicationRecord
   scope :running_total_distance, -> { last.running_total_distance.to_i }
 
   def calculate_distance_from_last_city
-    if Post.last.id > 1
+    if Post.last
       prev_lat = Post.last.lat
       prev_lng = Post.last.lng
       if self.lat == 999999999 && self.lng === 999999999
@@ -25,7 +25,7 @@ class Post < ApplicationRecord
       end
     else
       self.distance_from_last_city = 0
-    end  
+    end
   end
 
   def calculate_running_total_distance
