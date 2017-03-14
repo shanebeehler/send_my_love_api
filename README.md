@@ -1,24 +1,14 @@
-# README
+# Send My Love Web App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Web App created with a backend in Rails and front-end using React.js / Redux
 
-Things you may want to cover:
+- Uses Facebook Javascript SDK to login users and share their name.
 
-* Ruby version
+- Uses reverse geocode api to turn current location coordinates into locality and country.
 
-* System dependencies
+- Users "send love" by sharing their Name and Location. They then receive love from the person that sent before them. They
+  see the straight line distance from when they received and eventually to where the next person receives.
+  
+- Running totals such as Total Distance Love has travelled are shown
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Long task of updates to made still
