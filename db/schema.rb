@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170217205551) do
+ActiveRecord::Schema.define(version: 20170314153603) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20170217205551) do
     t.float    "distance_from_last_city"
     t.float    "running_total_distance"
     t.string   "user_id"
+    t.float    "milliseconds"
   end
 
 end
